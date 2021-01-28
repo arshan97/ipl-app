@@ -4,6 +4,7 @@ import { About, Description, Hide, Image } from "../styles"
 import { motion } from "framer-motion"
 import { fade, photoAnim, titleAnim } from "../animation/animate"
 import Wave from "./Wave"
+import { Link } from "react-router-dom"
 
 export const AboutSection = () => {
   return (
@@ -24,8 +25,9 @@ export const AboutSection = () => {
         <motion.p variants={fade}>
           Ek Desh! Ek Junu! <br /> Dil Se Dil Wosh Sabka Ud Jyaega
         </motion.p>
-
-        <motion.button variants={fade}>Find Your Team</motion.button>
+        <Link to="/teams">
+          <motion.button variants={fade}>Find Your Team</motion.button>
+        </Link>
       </Description>
 
       <Image>
